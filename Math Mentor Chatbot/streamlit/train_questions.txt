@@ -1,0 +1,40 @@
+Question: Simplify the expression 12x - 4x + 3 - 2x + 1. A) 6x + 4 B) 10x + 2 C) 6x + 2 (correct) D) 10x + 4.
+What is the sum of the first two common multiples of 4 and 6? A) 24 ; B) 60; C) 36 (correct); D) 48.
+What is the result of multiplying 3 260 by 100? A) 3 260 ; B) 32 600; C) 326 000 (correct); D) 3 260 000.
+What is the value of 10x+5-3x when x=6? A) 45 B) 55 C) 65 (correct) D) 75
+In the number 392 504, the digit 9 is in which place? A) hundreds; B) ten thousands; C) thousands (correct); D) hundred thousands.
+How many hundredths are there in 0.87? A) 0.08; B) 0.8; C) 87 (correct); D) 80.
+What is the numeral representation of "five million, nine thousand and sixty"? A) 5 009 006; B) 5 009 060 (correct); C) 5090 006; D) 5090 060.
+Question: What is the decimal representation of 3 ones, 4 tenths, and 7 thousandths? A) 3.47 ; B) 3.407 (correct); C) 4.37; D) 3.74.
+What is the area of a semicircle with a diameter of 84 cm? (Take pi = 22/7); A) 264 cm²; B) 528 cm²; C) 2772 cm² (correct); D) 5544 cm².
+Which number rounds off to 5200 when rounded to the nearest hundred? A) 5099 ; B) 5159; C) 5299 (correct); D) 5310.
+Question: Round off 4567 to the nearest ten. A) 4500; B) 4560; C) 4570 (correct); D) 4577.
+Question: In the number 456.789, which digit is in the hundredths place?; A) 4; B) 5; C) 8 (correct); D) 9.
+What is the equivalent of 3040 grams in kilograms and grams? A) 3kg 4g ; B) 3kg 40g (correct); C) 30kg 4g; D) 30kg 40g.
+Question: Convert 5 km 50 m into km. A) 5050m ; B) 5.005 km; C) 5.05 km (correct); D) 5.5 km.
+Question: If 4,050 x 500 = 405 x ___ x 5, what number should replace the blank? A) 50 ; B) 500; C) 5,000 (correct); D) 50,000.
+Question: Convert 25 litres and 45 ml into ml. A) 25045 ml; B) 2545 ml; C) 25000 ml; D) 25450 ml (correct).
+Question: A triangle has a height of 48 cm and a base of 51 cm. What is the area of the triangle? A) 998 cm^2 ; B) 1024 cm^2; C) 1224 cm^2 (correct); D) 2448 cm^2.
+What is the sum of all the factors of 9? A) 12 ; B) 16; C) 13 (correct); D) 15.
+Question: What is the correct representation of 4 hundreds, 7 tenths, and 2 thousandths? A) 400.720 ; B) 470.200 ; C) 400.072 (correct); D) 407.200.
+Question: Round off 76.843 to 2 decimal places. A) 76.84 ; B) 76.85 (correct); C) 76.80; D) 77.00.
+Question: Convert 3050 grams into kilograms. What is the correct conversion?; A) 3.05 kg ; B) 30.5 kg; C) 305 kg; D) 0.305 kg (correct).
+What is the sum of 50 tens, 50 hundredths, and 5 thousandths? A) 50.505 ; B) 50.055; C) 500.505 (correct); D) 500.055
+In the number 4 683 170, which digit is in the hundred thousands place? A) 1 ; B) 3; C) 6 (correct); D) 8.
+Question: Lisa purchased a house for $256,745. What is this amount when rounded off to the nearest $1000?; A) $256,000 ; B) $256,700; C) $257,000 (correct); D) $256,800.
+What does the first digit, 5, represent in the number 534 987? A) 500 B) 5000 C) 500 000 (correct) D) 50000
+What is the value of the digit 4 in the number 456 102? A) 4 B) 40 C) 400 D) 400 000 (correct)
+Question: Convert 510 meters into a percentage of 4.25 kilometers. A) 0.12% ; B) 1.2% ; C) 12% (correct); D) 120%
+What is the value of 8x-3+5x when x=3? A) 21 B) 31 C) 39 D) 49
+What number should be added to 4000 000 + 5000 + 300 + 20 + 1 to get 4 605 321? A) 600 ; B) 6 000; C) 600 000 (correct); D) 60 000.
+In the number 45.32, which digit is in the tenths place? A) 4 B) 5 C) 3 (correct) D) 2
+If y = 8, what is the value of 15y + 10 - 3y? A) 42 ; B) 96 ; C) 106 (correct) ; D) 120.
+What is 80% of 160? A) 32 ; B) 72; C) 128 (correct); D) 12 800.
+What is the average of the numbers 108, 305, and 79? A) 123 ; B) 164 (correct); C) 246; D) 492
+What is 26.05 kg in kilograms and grams? A) 2kg 605g ; B) 26kg 5g; C) 26 kg 50g (correct); D) 26 kg 500g.
+Anthony bought a box of candies for $8. If the box contained 40 candies, how much did each candy cost? A) 5 cents ; B) 20 cents (correct); C) 32 cents; D) 50 cents.
+Which of the following numbers is the largest? A) 325 154 ; B) 325541; C) 352 154 (correct); D) 352 145.
+Question: What is the missing number in the following equation: 345 678 = 300 000 + ______ + 40 000 + 5 000 + 600 + 70 + 8; A) 3 000 ; B) 30 000; C) 300 000 (correct); D) 3 000 000.
+Question: If x=3 and y = 4, what is the value of 6xy + y?; A) 72; B) 76; C) 78 (correct); D) 80.
+How many hundreds are there in 123 000? A) 230 ; B) 1230; C) 12300 (correct); D) 2300.
+Question: Round off 4.267 to the nearest hundredth. A) 4.2 ; B) 4.26; C) 4.27 (correct); D) 4.30.
