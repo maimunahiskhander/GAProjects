@@ -4,10 +4,13 @@ from llama_index.llms import OpenAI
 import openai
 from PIL import Image
 import random
-
+from dotenv import load_dotenv, find_dotenv
+import os
 
 st.set_page_config(page_title="Chat with Your Math Tutor", page_icon="👩🏻‍🏫", layout="centered", initial_sidebar_state="auto", menu_items=None)
-openai.api_key = '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'#st.secrets.openai_key
+
+_ = load_dotenv(find_dotenv()) # read local .env file
+openai.api_key = os.environ['OPENAI_API_KEY']
 
 image = Image.open('st_banner.png')
 st.image(image, caption='Welcome to the AI Math Tutor!',width=1000)
