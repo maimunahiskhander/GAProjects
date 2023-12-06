@@ -1,97 +1,66 @@
-# Project 3: Reddit Classifier - Netflix or Disney Plus
+# Math Mentor Chatbot
 
-Prepared by: Maimunah Binte Iskhander, 29 Sept 2023
+Prepared by: Maimunah Binte Iskhander, 7 Dec 2023
 
 ### Overview
 
-This project employs Exploratory Data Analysis (EDA) and various classification models to predict whether a given text originates from a Netflix subreddit or a Disney Plus subreddit. The models explored include Logistic Regression, Multinomial Naive Bayes, Random Forest, AdaBoost, and XGBoost. The text data is vectorized using either CountVectorizer or TfidfVectorizer.
+This project introduces a specialized chatbot designed to assist students in solving PSLE (Primary School Leaving Examination) multiple choice mathematics questions. The chatbot leverages advanced natural language processing techniques, employing Retrieval Augmented Generation (RAG) and Llama-index for enhanced information retrieval and answer accuracy. It runs on a fine-tuned version of the GPT-3.5-turbo engine, specifically optimized for mathematical problem-solving. This custom solution aims to provide an interactive and effective tool for students preparing for the PSLE in Singapore, offering them a novel way to engage with challenging math concepts and practice questions.
 
 ### Problem Statement
 
-Netflix aims to launch a marketing campaign that utilizes keywords and themes commonly associated with Disney+ in order to divert more online search traffic to their platform.
+Our AI-powered chatbot addresses the need for accessible and timely academic support, offering instant and personalized assistance to upper primary students. It fills the gaps in traditional learning by providing on-demand explanations, solutions, and concept clarifications, enhancing student engagement and understanding in mathematics
 
 ### Evaluation Criteria
 
-Given the nature of the data and its potential class imbalance, models will be evaluated based on their F1 score.
+Given that we are using a chatbot, the evaluation metrics will be the RAGAS score, answer relevancy and faithfulness.
 
 ### Datasets
 
-Scraped Datasets: 
-* [`Netflix_reddit_submissions.csv`](./datasets/Netflix_reddit_submissions.csv): Netflix subreddit data retrieved on 26 Sept 2023.
-* [`DisneyPlus_reddit_submissions.csv`](./dataset/DisneyPlus_reddit_submissions.csv): Disney Plus subreddit data retrieved on 26 Sept 2023.
+80 multiple choice questions without diagrams from past PSLE papers.
 
 ### Data Dictionary
 
 | Variable Name         | Data Type           | Description                                   |
-|-----------------------|---------------------|-----------------------------------------------|
-| `post_id`             | object              | Unique identifier for the submission          |
-| `title`               | object              | Title of the submission                       |
-| `selftext`            | object              | Body text of the submission                   |
-| `ups`                 | int64               | Number of upvotes received by the submission  |
-| `upvote_ratio`        | float64             | Ratio of upvotes to total votes               |
-| `num_comments`        | int64               | Number of comments on the submission          |
-| `author`              | object              | Author's username                             |
-| `link_flair_text`     | object              | Flair text associated with the submission     |
-| `awards`              | int64               | Number of awards received by the submission   |
-| `is_original_content` | bool                | Whether the content is original               |
-| `is_video`            | bool                | Whether the submission is a video             |
-| `post_type`           | object              | Type of the post (either text or link)        |
-| `domain`              | object              | Domain associated with the submission link    |
-| `created_utc`         | float64             | UTC timestamp when the submission was created |
-| `pinned`              | bool                | Whether the submission is pinned              |
-| `locked`              | bool                | Whether the submission is locked              |
-| `stickied`            | bool                | Whether the submission is stickied            |
-| `readable_time`       | datetime64[ns]      | Readable timestamp of the submission           |
+|-----------------------|---------------------|------------------------------------------|
+| `image`             | object              | image no     |
+| `question`               | object              | question stem with four options       |
+| `solution`            | object              | detailed solution             |
+| `classification`     | object           | cognitive level classification (AO1/AO2/AO3)  |
+| `topic`            | object              | topic the question belongs to              |
+
 
 
 ### Submissions
 Files submitted: 
-* [`Project_3_Part_1.ipynb`](./code/Project_3_Part_1.ipynb): This notebook covers Data Scraping, Problem Statement formulation, and Research.
-* [`Project_3_Part_2.ipynb`](./code/Project_3_Part_2.ipynb): This notebook delves into Data Cleaning, Preprocessing, EDA, Model Building, Hyperparameter Tuning, and Key Findings.
-* [`Project_3_slides.pdf`](./slides/Project_3_slides.pdf): Presentation slides for the project.
+* [`01_Data_Prep.ipynb`](./code/01_Data_Prep.ipynb): This notebook covers data collection, cleaning and preprocessing.
+* [`backend-processing.ipynb`](./streamlit/backend-processing.ipynb): This notebook delves into the 'behind the scenes' of building the index for the chatbot as well as its training and evaluation.
+* [`app.py`](./streamlit/app.py): This notebook contains the code to run the streamlit application that employs the fine-tuned engine. It acts as an interface for the chatbot.
+* [`ai_meets_math_slides.pdf`](./slides/ai_meets_math_slides.pdf): Presentation slides for the project.
 
 ### Summary
-The Multinomial Naive Bayes model, paired with TfidfVectorizer, was determined to be the most effective model. The model's hyperparameters are:
+The fine-tuned GPT-3.5-Turbo model was chosen to be the final engine for the chatbot.
 
-| Parameter                    | Value                                                      |
-|------------------------------|------------------------------------------------------------|
-| `classifier`                 | MultinomialNB(alpha=0.1)                                   |
-| `classifier__alpha`          | 0.1                                                        |
-| `vectorizer`                 | TfidfVectorizer(max_df=0.9, max_features=12000, min_df=2, ngram_range=(1, 2)) |
-| `vectorizer__max_df`         | 0.9                                                        |
-| `vectorizer__max_features`   | 12000                                                      |
-| `vectorizer__min_df`         | 2                                                          |
-| `vectorizer__ngram_range`    | (1, 2)                                                     |
+| Model | RAGAS Score | Answer Relevancy | Faithfulness |
+|:----------------:|:-----------:|:------------------:|:--------------:|
+| GPT-3.5-Turbo | 0.7685 | 0.8517 | 0.7000 |
+| Fine-tuned | 0.8150 | 0.8922 | 0.7500 |
 
-The model's performance was assessed using the F1 score, with the following outcomes:
+### Conclusion
 
-
-|Metric    |Train     |Test      |
-|:--------:|:--------:|:--------:|
-|F1 Score  |0.9858	  |0.9369    |
-
-
-The train-test score difference is 4.8%, which falls within the acceptable 10% threshold, indicating a mild overfitting.
-
-### Key Findings
-
-1. Common words such as "app", "look", "good", "want", "time", "think", "episode", "movie", "like", and "watch" appear frequently in both subreddits. This suggests topics of mutual interest across both streaming services.
-2. The presence of words like "bad" and "cancel" might highlight some users' dissatisfaction or issues with Netflix.
-3. Distinct themes associated with DisneyPlus are indicated by words like "star wars", "marvel", and "hulu".
-4. Both subreddits contain discussions about platform functionalities and user experiences. This underscores the importance users place on the user interface, features, and overall experience of the streaming platforms.
-
-### Business Recommendations
-
-1. Leverage Popular Disney Themes: Netflix could consider securing or creating content that aligns with popular themes on DisneyPlus, such as the sci-fi or superhero genres. This strategy could attract viewers desiring content variety.
-2. Enhance User Experience: Netflix should prioritize user experience by ensuring a user-friendly interface and continuously upgrading platform features.
-3. Content Marketing: Highlighting unique Netflix content can be a strategic move to attract or retain viewers.
+In this project, we successfully developed an AI-powered chatbot designed to enhance the learning experience of upper primary students in mathematics. By addressing the critical need for timely and personalized academic support, our chatbot has demonstrated its capability to bridge the gaps in traditional educational methods. Key features such as on-demand explanations, problem-solving assistance, and concept clarification have significantly contributed to improving student engagement and understanding in mathematics.
 
 ### Areas for Improvement
 
-1. Data Expansion: More data over a longer period can provide robustness to the model.
-2. Sentiment Analysis: Integrate sentiment scores as features for a deeper understanding of user sentiment.
-3. Model Exploration: Consider advanced models, including deep learning, for text classification.
-4. Ensemble Methods: Combining predictions from various models might improve accuracy.
-5. Addressing Cleaning Pitfalls: Ensure that automated cleaning doesn't lead to artifacts like long strings of words.
+1.  **Enhance Data Repository**: By adding more diverse and comprehensive data, we can further train the model to understand and respond to a wider array of mathematical queries. This expansion will improve the model's accuracy and predictive capabilities, making it more robust and reliable.
+    
+2.  **Incorporate Word Problems**: Customizing the model to handle word problems will add a critical dimension to the chatbot, enabling it to assist with more complex and real-world mathematical scenarios. This feature will help students develop their problem-solving skills in a more practical context.
+    
+3.  **Interactive UI Elements**: Introducing interactive elements like buttons for common prompts can make the chatbot more user-friendly and intuitive. This will streamline the interaction process, allowing students to quickly access frequently needed assistance.
+    
+4.  **Broaden the Range of Topics**: Expanding the chatbot's knowledge base to cover a broader range of mathematical topics will make it a more comprehensive educational tool. This expansion will cater to a wider spectrum of student needs and curricular requirements.
+    
+5.  **Incorporate Student Feedback**: Regularly integrating feedback from students will ensure that the chatbot evolves in line with the users' needs and preferences. This feedback loop will be instrumental in continuously refining the chatbot's effectiveness and user experience.
+    
+6.  **App Integration**: Developing a dedicated mobile or web application for the chatbot can enhance accessibility and convenience. An app would provide a centralized platform for students to access the chatbot and could include additional features like progress tracking, personalized learning paths, and interactive learning resources.
 
 
